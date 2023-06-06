@@ -3,7 +3,7 @@
 import React from "react";
 import { useContext, useEffect ,useState} from "react";
 
-const  API_URL =   `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_VERSION}&s=logan`;                           // `https://www.omdbapi.com/?apikey=5a1ce046&s`;
+const  API_URL =   `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_VERSION}&s=logan`;                           
 const AppContext=React.createContext();
 // a provider created
 const AppProvider=({children}) =>{
