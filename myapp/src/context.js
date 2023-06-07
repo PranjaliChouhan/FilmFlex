@@ -12,17 +12,22 @@ const AppProvider=({children}) =>{
    const[isError,setIsError]=useState({show:"false",msg:""}); 
    const[query,setQuery] = useState("batman");
 const getMovies=async(url) =>{
+    setIsLoading(true);
 try{
     const res=await fetch(url);
     const data=await res.json();
     console.log(data);
     if(data.Response==="True"){
         setIsLoading(false);
+        setIsError({
+            show:false,
+            msg:"",
+        });
         setMovie(data.Search);
     } else {
         setIsError({
             show:true,
-            msg:data.error,
+            msg:data.Error,
         });
     }
 
