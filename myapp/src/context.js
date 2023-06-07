@@ -3,13 +3,14 @@
 import React from "react";
 import { useContext, useEffect ,useState} from "react";
 
-const  API_URL =   `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_VERSION}&s=logan`;                           
+const  API_URL =   `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_VERSION}`;                           
 const AppContext=React.createContext();
 // a provider created
 const AppProvider=({children}) =>{
    const[isLoading,setIsLoading]=useState(true); 
    const[movie,setMovie] = useState([]);
    const[isError,setIsError]=useState({show:"false",msg:""}); 
+   const[query,setQuery] = useState("batman");
 const getMovies=async(url) =>{
 try{
     const res=await fetch(url);
@@ -29,15 +30,18 @@ try{
   console.log(error);
 }
 };
-
+/* debouncing*/ 
 useEffect(()=>{
-getMovies(API_URL);
-},[]);
+    let timerOut=setTimeout(()=>{
+getMovies(`${API_URL}&s=${query}`);  /*useeefect always retuen one fuction i.e your cleanup function */
+    },800);
+    return ()=> clearTimeout(timerOut);
+},[query]);
 
 
 
     return( 
-    <AppContext.Provider value={{isLoading,isError,movie}}>
+    <AppContext.Provider value={{isLoading,isError,movie,query,setQuery}}>
         {children}
         </AppContext.Provider>
     );
