@@ -1,5 +1,6 @@
 import React from "react";
-import {Routes,Route} from "react-router-dom"
+import {  Routes, Route } from "react-router-dom";
+
 import './App.css';
 import Home from"./Home";
 import Singlemovie from"./Singlemovie";
@@ -16,13 +17,14 @@ function App() {
     <>
    
         <Routes>
+        
 
-        <Route path="/" element={<Home />} />
+             <Route path="/" element={<Home />} />
       
-        <Route path="movie/:id" element={<Singlemovie />} />
-        <Route path="*" element={<Error/>} />
+             <Route path="movie/:id" element={<Singlemovie />} />
+             <Route path="*" element={<Error/>} />
+        
         </Routes>
-   
     
     </>
   );
