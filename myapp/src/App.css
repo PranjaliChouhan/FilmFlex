@@ -79,6 +79,7 @@ input{
     box-shadow: rgba(0,0,0,0.1) 0px 1px 3px 0px,rgba(0,0,0,0.06)0px 1px 2px 0px;
     outline:none;
     margin-top:2rem;
+    text-align: center;
 }
 .card-error p{
     color:aquamarine;
@@ -173,5 +174,12 @@ figure{
  }
  .back-btn{
     padding: 1.2rem 3.6rem;
+ }
+ /*timeplace*/
+ .place p{
+    padding: auto;
+    text-align: center;
+    font-size:3rem ;
+    color: brown;
  }
  

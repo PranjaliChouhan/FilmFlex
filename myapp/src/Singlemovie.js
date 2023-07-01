@@ -58,7 +58,7 @@ if(isLoading){
             <p className="card-text">{movie.imdbRating}</p>
             <p className="card-text">{movie.Country}</p>
 
-             <NavLink to ="/" className="back-btn">Book Show</NavLink>   
+             <NavLink to ="time-place" className="back-btn">Book Show</NavLink>   
             </div>   
         </div>
         </section>
