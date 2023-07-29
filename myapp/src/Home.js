@@ -1,8 +1,9 @@
 import React from "react";
-//import {AppContext} from "./Components/context";
-//import {useGlobalContext} from "./Components/context";
+
 import Movies from "./Movies";
 import Search from "./Search";
+import TimePlace from "./TimePlace";
+
 const Home=()=>{
     //const name=useContext(AppContext);
    
@@ -10,6 +11,7 @@ const Home=()=>{
     <Search/>
     
    <Movies/>
+   <TimePlace/>
     </>
     );
 };
