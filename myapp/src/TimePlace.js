@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { mallsList } from "./config";
 import MallsCard from "./MallsCard";
+import Header from "./Header";
 
 const TimePlace = () => {
   const [malls, setMalls] = useState(mallsList);
@@ -9,7 +10,8 @@ const TimePlace = () => {
   return (
     <>
       <div className="malls">
-        <h1>Show-Time</h1>
+        
+        <Header />
         
         <div className="singlemall">
           

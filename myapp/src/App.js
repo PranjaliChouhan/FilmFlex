@@ -4,30 +4,21 @@ import TimePlace from "./TimePlace";
 import './App.css';
 import Home from"./Home";
 import Singlemovie from"./Singlemovie";
-
-
-
-
-
-
-
+import SeatMap from "./SeatsMap";
 
 function App() {
   return (
     <>
-   
-        <Routes>
-        
-
+   <Routes>
              <Route path="/" element={<Home />} />
-             <Route path="movie/:id" element={<Singlemovie />} />
-             <Route path="*" element={<TimePlace/>}/>
+             <Route path="movie/:id" element={<Singlemovie />}/>
+             <Route path="TimePlace" element={<TimePlace />} />
+             <Route path="seatmap" element={<SeatMap />} /> 
+          
+          
              
-           
-        </Routes>
-    
+  </Routes>
     </>
   );
 }
-
 export default App;

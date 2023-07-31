@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const generateRandomTime = () => {
   // Generate random time between 9 AM and 11 PM
@@ -28,8 +29,13 @@ const MallsCard = ({ name, city, zipcode, cinemas }) => {
         ))}
       </ul>
       <div className="buttons-time">
+       
         {[...Array(generateRandomButtonCount())].map((_, index) => (
-          <button key={index}>{generateRandomTime()}</button>
+        <Link to="SeatMap">  
+          <button className="btn" key={index}>
+            <span>{generateRandomTime()}</span>
+            </button>
+         </Link>   
         ))}
       </div>
     </div>
