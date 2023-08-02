@@ -9,10 +9,11 @@ const Home=()=>{
    
    return( 
    <>
+   <div className="home">
     <Search/>
     
    <Movies/>
-
+</div>
     </>
     );
 };

@@ -7,21 +7,21 @@ const Seat = ({ seatNumber, isSelected, onSelect }) => {
   const seatStyle = {
     width: '30px',
     height: '30px',
-    backgroundColor: isSelected ? 'green' : 'gray',
+    backgroundColor: isSelected ? 'rgb(205, 239, 239)' : 'gray',
     margin: '5px',
     display: 'inline-block',
     cursor: 'pointer',
     borderRadius: '50%',
     textAlign: 'center',
     lineHeight: '30px',
-    color: isSelected ? 'white' : 'black',
+    color: isSelected ? 'black' : 'white',
     fontWeight: 'bold',
     border: '1px solid black', // Adding a border
     fontSize: '14px', // Changing the font size
   };
   
   return (
-    <div style={seatStyle} id="seat-dec" className={seatClassName} onClick={() => onSelect(seatNumber)}>
+    <div style={seatStyle}  className={seatClassName} onClick={() => onSelect(seatNumber)}>
       {seatNumber}
     </div>
   );

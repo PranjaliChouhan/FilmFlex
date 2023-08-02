@@ -1,4 +1,5 @@
 import React from 'react';
+import money from "./assets/money.png";
 
 const Bill = ({ selectedSeats, seatPrices }) => {
   const calculateTotalPrice = () => {
@@ -42,7 +43,10 @@ const Bill = ({ selectedSeats, seatPrices }) => {
       <div>CGST: Rs {calculateCGST()}</div>
       <div>SGST: Rs {calculateSGST()}</div>
       <div>Total Amount with Taxes: Rs {calculateTotalAmountWithTaxes()}</div>
-      <button>Proceed</button>
+      <button>Pay
+        <img src={money} alt="notes" style={{ marginRight: "8px" }} />
+
+      </button>
       </div>
     </div>
   );

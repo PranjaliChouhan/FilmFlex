@@ -39,13 +39,18 @@ img{
 }
 
 /*resuable code*/
+body{
+  background-color: #07232c;
+ 
+}
 .container{
     max-width: 140rem;
     margin:auto;
     padding:3rem;
 }
 .grid{
-    display:grid;
+    display:flex;
+    flex-wrap: wrap;
     gap:3rem;
 
 }
@@ -69,28 +74,36 @@ img{
     margin:4rem 0;
 
 }
+.search-section h2{
+  color: #fff;
+}
 input{
     width:30rem;
+    height: 50px;
     border-radius:100px;
-    border:none;
-    border: 1px solid var(--border-clr);
+    border-style:none;
+
     padding:1 rem 2rem;
     font-size:1.8rem;
-    box-shadow: rgba(0,0,0,0.1) 0px 1px 3px 0px,rgba(0,0,0,0.06)0px 1px 2px 0px;
+    box-shadow:2px 2px 2px rgb(205, 239, 239),
+               2px 2px 2px rgb(205, 239, 239),
+               2px 2px 2px rgb(205, 239, 239);
     outline:none;
     margin-top:2rem;
     text-align: center;
+    font-family: cursive;
 }
 .card-error p{
-    color:aquamarine;
+    color:rgb(215, 243, 241);
     margin-top: 1rem;
     font-size: 1.8rem;
+    font-family: cursive;
 }
 /*singlemovie*/
 .movie-section{
     width:100%;
     height:100vh;
-    background-color: var(--text-clr);
+  
     display:grid;
     place-items:center;
 }
@@ -111,7 +124,9 @@ text-align:center;
     display:grid;
     gap:2rem;
     grid-template-columns:0.6fr 1fr;
-    box-shadow:gray;
+    box-shadow:-5px -2px 10px rgb(205, 239, 239),
+               2px 2px 10px rgb(205, 239, 239),
+               2px 2px 10px rgb(205, 239, 239);
     border-radius: 2rem;
 
 }
@@ -174,38 +189,45 @@ figure{
  }
  .back-btn{
     padding: 1.2rem 3.6rem;
+    border-radius: 2.5rem;
+    margin:5px;
  }
  /*timeplace*/
  .malls{
     width:100%;
     height:100%;
-
+    display: flex;
+    flex-direction: column;
+    
  }
  
  .mall-box{
     width:100%;
     height:130px;
-    border:1px solid #164ca7;
+    border:1px solid #e5eef0;
     margin:10px;
     padding:0.5rem;
-    position:relative;
+    display: flex;
+    flex-direction: column;
+   
     
  }
  .mall-box h2 {
-  color:#164ca7;
+  color:rgb(205, 239, 239);
  }
  .mall-box h3{
-    color:#164ca7;
+    color:rgb(205, 239, 239)
    }
 
  .mall-box li{
     list-style: none;
-    color:#164ca7;
+    color:rgb(205, 239, 239)
  }
  .buttons-time{
   display: flex; 
   padding:0.5rem;
-  justify-content: center; 
+  justify-content: center;
+  align-items: center; 
   margin: 10px;
  
   width:67.7%;
@@ -213,15 +235,29 @@ figure{
   left:400px;
   bottom:123px;
   height:128px;
-  background-color:rgb(213, 231, 231);
+  background-color:rgb(206, 229, 229);
  
   
  }
- 
+ /* mallsCard.css */
+.link-style {
+  text-decoration: none;
+
+  outline: none;
+  border-style:none ;
+  height: 45px;
+  
+  justify-content: center;
+  align-items: center;
+  
+  
+
+}
+
+ /*button of time*/
  .btn {
-    position: relative;
-    top:20px;
-    margin: 20px;
+    
+    
     padding: 17px 35px;
     outline: none;
     text-decoration: none;
@@ -232,9 +268,9 @@ figure{
     height: 50px;
     text-transform: uppercase;
     background-color: #fff;
-    border: 1px solid rgba(22, 76, 167, 0.6);
+    border-style: none;
     border-radius: 10px;
-    color: #1d89ff;
+    color: #000000;
     font-weight: 400;
     font-family: inherit;
     z-index: 0;
@@ -245,7 +281,7 @@ figure{
   
   
   .btn span {
-    color: #164ca7;
+    color: #0a0a0a;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.7px;
@@ -253,11 +289,13 @@ figure{
   
   .buttons-time   button:hover {
     animation: rotate624 0.7s ease-in-out both;
+    background-color: #07232c;
   }
   
    .buttons-time   button:hover span {
     animation: storm1261 0.7s ease-in-out both;
     animation-delay: 0.06s;
+    color:white;
   }
   
   @keyframes rotate624 {
@@ -334,7 +372,7 @@ figure{
   }
   
 
-
+/*header*/
   .header{
     display: flex;
     flex-direction: row;
@@ -346,42 +384,54 @@ figure{
     position:relative;
     top:10px;
     left:10px;
-    color:#164ca7;
+    color:rgb(205, 239, 239);
   }
-  .header button{
-    position:relative;
-    left:218px;
-    margin:5px;
-    width:120px;
-    height:45px;
-    background-color: rgb(237, 246, 246);
-    color:#164ca7;
-    border-color: #164ca7;
+  /*header buttons*/
+  .header button {
+    display: grid;
+    place-items: center;
+    background: #e3edf7;
+    padding: 1.4em;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+          -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: transform 0.5s;
+    position: relative;
+    left:30px;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  .header button:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+          inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+          -0.5px -0.5px 0px rgba(255,255,255,1),
+          0.5px 0.5px 0px rgba(0,0,0,0.15),
+          0px 12px 10px -10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+    transform: translateY(0.5em);
+  }
+  
+  .header p {
+    transition: transform 0.5s;
+  }
+  
+  .header button:hover p {
+    transform: scale(0.9);
+    fill: #333333;
+  }
+  
+  /*seats*/
   .seat-map {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+  }
+  .seat-map h2{
+    color:rgb(205, 239, 239);
+    font-size: 30px;
+    font-family: cursive;
   }
   
   .seats-container {
@@ -391,37 +441,6 @@ figure{
     gap: 10px;
   }
   
-  /*.seat {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .selected {
-    background-color: #1d89ff;
-    color: #fff;
-  }
-  
-  .selected-seats {
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
-
-  #seat-dec{
-    width:20px;
-    height: 20px;
-    margin:2px;
-
-  }
-*/
   
 
 
@@ -429,7 +448,7 @@ figure{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #164ca7;
+    
     
   }
   
@@ -447,6 +466,7 @@ figure{
     align-items: center;
   position: relative;
   right:130px;
+  top:5px;
 
 
   }
@@ -455,7 +475,7 @@ figure{
     flex-direction: column;
     align-items: center;
     position: relative;
-    bottom: 270px;
+    bottom: 220px;
     left:130px;
   }
   .seats-container4{
@@ -464,7 +484,7 @@ figure{
     align-items: center;
     position: relative;
     right:137px;
-    bottom:250px;
+    bottom:193px;
    
   }
   .seats-container5{
@@ -472,8 +492,8 @@ figure{
     flex-direction: column;
     align-items: center;
     position: relative;
-    bottom: 520px;
-    left:135px;
+    bottom: 420px;
+    left:132px;
    
   }
   
@@ -481,49 +501,116 @@ figure{
     
     display: flex;
     align-items: center;
-    margin-bottom: 5px; /* Add some spacing between the rows */
+    margin-bottom: 5px; 
   }
   
   .row-label {
-    margin-right: 5px; /* Add some spacing between the row label and seats */
+    margin-right: 5px; 
   }
   
   .array {
-    /* Add styles for the seats */
+   
     width: 30px;
     height: 30px;
-    border: 1px solid black;
-    margin: 5px; /* Add some spacing between the seats */
+    border: 1px solid hsl(0, 0%, 6%);
+    margin: 5px; 
   }
   .selected-seats{
     display: flex;
     align-items: center;
     justify-content: center;
     position:relative;
-    bottom:450px;
+    bottom:370px;
     font-size: 30px;
+    color: rgb(205, 239, 239);
+    font-style: italic;
   }
 
   .bill-container{
     display:flex ;
-    justify-content: center;
-    align-items: center;
+    justify-content: initial;
+    padding: 1rem;
     flex-direction: column;
     font-size: 20px;
     position: relative;
-    bottom:400px;
+    bottom: 1100px;
+    
 
+   background-color: rgb(205, 239, 239);
+   width:330px;
+   
+   border-radius: 1.5rem;
   }
   .bill-container h2{
-    font-size: 50px;
+    font-size: 30px;
   }
   .pay{
     position: relative;
     left:10px;
+    font-family: fantasy;
   }
-  .pay button{
+  /*.pay button{
     width:90px;
     height:45px;
     border-radius: 0.5rem;
-    background-color: #6c88b9;
+    margin:20px;
+    background-color: #07232c;
+  }*/
+  .pay button {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    margin:10px;
+  }
+  
+  .pay img {
+    width: 10px;
+    height: 30px;
+  }
+  
+  
+  
+  .pay button::before {
+    width: 150px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+  }
+  
+  .pay button:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%,-50%);
+    border-radius: 0;
+  }
+  
+  .pay button:active {
+    transform: translate(5px,5px);
+    transition-duration: .3s;
+  }
+
+
+  @media (max-width: 768px) {
+    /* Your media query rules for screens with width <= 768px */
+    /* For example, you can adjust font sizes, padding, margins, etc. */
+    body {
+      font-size: 14px;
+    }
   }

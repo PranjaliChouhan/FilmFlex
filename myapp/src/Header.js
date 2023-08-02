@@ -13,7 +13,7 @@ const Header = () => {
         <h1>Show-time</h1>
       {weekDays.map((day, index) => (
         <button key={index} onClick={handleDayClick}>
-          {day}
+          <p>{day}</p>
         </button>
       ))}
     </div>

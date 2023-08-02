@@ -16,6 +16,7 @@ const generateRandomButtonCount = () => {
 
 const MallsCard = ({ name, city, zipcode, cinemas }) => {
   return (
+    <>
     <div className="mall-box">
       <h2>{name}</h2>
       <h3>{city}</h3>
@@ -28,17 +29,20 @@ const MallsCard = ({ name, city, zipcode, cinemas }) => {
           </li>
         ))}
       </ul>
-      <div className="buttons-time">
+     <div className="outer-btn">
+        <div className="buttons-time">
        
         {[...Array(generateRandomButtonCount())].map((_, index) => (
-        <Link to="SeatMap">  
+         <Link to="SeatMap" className="link-style">  
           <button className="btn" key={index}>
             <span>{generateRandomTime()}</span>
             </button>
-         </Link>   
+         </Link> 
         ))}
       </div>
+        </div>
     </div>
+    </>
   );
 };
 

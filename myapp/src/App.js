@@ -12,8 +12,8 @@ function App() {
    <Routes>
              <Route path="/" element={<Home />} />
              <Route path="movie/:id" element={<Singlemovie />}/>
-             <Route path="TimePlace" element={<TimePlace />} />
-             <Route path="seatmap" element={<SeatMap />} /> 
+             <Route path="/time-place" element={<TimePlace />} />
+             <Route path="*" element={<SeatMap />} /> 
           
           
              
