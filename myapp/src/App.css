@@ -67,6 +67,22 @@ body{
     justify-content:center;
     align-items:center;
 }
+
+/* movies.css */
+
+/* Media query for screens smaller than 768px (phones) */
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+}
+
 /*search */
 .search-section{
     margin:auto;
@@ -211,12 +227,18 @@ figure{
     flex-direction: column;
    
     
+   
+    
  }
  .mall-box h2 {
   color:rgb(205, 239, 239);
+  font-size: 1.5rem; /* Adjust font size for better visibility */
+
  }
  .mall-box h3{
-    color:rgb(205, 239, 239)
+    color:rgb(205, 239, 239);
+    font-size: 1.2rem; /* Adjust font size for better visibility */
+
    }
 
  .mall-box li{
@@ -229,13 +251,16 @@ figure{
   justify-content: center;
   align-items: center; 
   margin: 10px;
- 
+  /* Use 100% width to center the buttons */
   width:67.7%;
   position: relative;
   left:400px;
   bottom:123px;
   height:128px;
-  background-color:rgb(206, 229, 229);
+
+  
+  
+  
  
   
  }
@@ -421,7 +446,87 @@ figure{
     fill: #333333;
   }
   
+
+  /* Add this to center the "buttons-time" container on smaller screens */
+@media screen and (max-width: 767px) {
+  .header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+  }
+  .header h1{
+    font-size: 20px;
+    
+  }
+  .header button {
+    width:50px;
+    height: 15px;
+    justify-content: center;
+    align-items: center;
+  }
+  .header p{
+    font-size: 8px;
+  }
+
+  .mall-box {
+    height: auto;
+    
+      
+      border:1px solid #e5eef0;
+      margin:10px;
+      padding:0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center the content horizontally */
+      justify-content: center;
+     
+      
+   /* Allow the container to adjust its height based on content */
+  }
+
+  .mall-box h2 {
+    font-size: 1.2rem; /* Adjust font size for better visibility on phones */
+  }
+
+  .mall-box h3 {
+    font-size: 1rem; /* Adjust font size for better visibility on phones */
+  }
+
+  .mall-box li {
+    font-size: 0.9rem; /* Adjust font size for better visibility on phones */
+  }
+  .buttons-time {
+   
+    align-items: center;
+    text-align: center;
+    bottom: auto;
+    left: auto;
+    position: relative;
+   
+  }
+  .link-style {
+    height: 10px; /* Adjust height for better visibility on phones */
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 0;
+    margin-left: 10px;
+  }
+  .btn {
+    width: 20px;
+    height: 10px;
+    margin-top: 10px;
+    
+  }
+}
   /*seats*/
+.select-seat-bill{
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
   .seat-map {
     max-width: 600px;
     margin: 0 auto;
@@ -519,8 +624,9 @@ figure{
     display: flex;
     align-items: center;
     justify-content: center;
-    position:relative;
-    bottom:370px;
+    position: relative;
+    bottom: 350px;
+   
     font-size: 30px;
     color: rgb(205, 239, 239);
     font-style: italic;
@@ -528,13 +634,14 @@ figure{
 
   .bill-container{
     display:flex ;
-    justify-content: initial;
+
+    justify-content: center;
+    align-items: center;
     padding: 1rem;
     flex-direction: column;
     font-size: 20px;
     position: relative;
-    bottom: 1100px;
-    
+    bottom: 300px;
 
    background-color: rgb(205, 239, 239);
    width:330px;
@@ -545,17 +652,11 @@ figure{
     font-size: 30px;
   }
   .pay{
-    position: relative;
-    left:10px;
+   
     font-family: fantasy;
+    
   }
-  /*.pay button{
-    width:90px;
-    height:45px;
-    border-radius: 0.5rem;
-    margin:20px;
-    background-color: #07232c;
-  }*/
+  
   .pay button {
     width: 150px;
     height: 50px;
@@ -571,7 +672,7 @@ figure{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
     position: relative;
     overflow: hidden;
-    transition-duration: .3s;
+    transition-duration: 0.3s;
     margin:10px;
   }
   
@@ -607,10 +708,33 @@ figure{
   }
 
 
-  @media (max-width: 768px) {
-    /* Your media query rules for screens with width <= 768px */
-    /* For example, you can adjust font sizes, padding, margins, etc. */
-    body {
-      font-size: 14px;
+  @media screen and (max-width: 768px) {
+    .seat-map h2 {
+      font-size: 24px; /* Adjust font size for better visibility on phones */
+    }
+  
+    .bill-container {
+      width: 100%; /* Make the bill container full width on phones */
+      border-radius: 0; /* Remove border radius on phones */
+    }
+  
+    .bill-container h2 {
+      font-size: 26px; /* Adjust font size for better visibility on phones */
+    }
+  
+    .seat-row {
+      flex-wrap: wrap; /* Wrap seat rows on phones */
+    }
+  
+    .array {
+      width: 25px;
+      height: 25px;
+      /* Adjust seat size for better fit on phones */
+    }
+  
+    .selected-seats {
+      font-size: 24px; /* Adjust font size for better visibility on phones */
     }
   }
+
+  

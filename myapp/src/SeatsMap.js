@@ -3,13 +3,12 @@ import Seat from './Seats';
 import Bill from './Bill'; 
 
 const SeatMap = () => {
-  
   const numRows = 5;
   const numCols = 5;
   const containerCount = 5; 
   const rowLabels = ["A", "B", "C", "D", "E", "F"];
 
-  const seatPrices = [100, 150, 150, 250,250];
+  const seatPrices = [100, 150, 150, 250, 250];
   const [selectedSeatsArray, setSelectedSeatsArray] = useState(() => {
     return Array.from({ length: containerCount }, () => []);
   });
@@ -28,16 +27,19 @@ const SeatMap = () => {
       }
     });
   };
+  console.log(handleSeatSelect);
 
   const renderContainer = (containerIndex) => {
+    const startingSeatNumber = containerIndex * (numRows * numCols) + 1;
+  
     return (
       <>
         <div key={containerIndex} className={`seats-container${containerIndex + 1}`}>
           {Array.from({ length: numRows }, (_, rowIndex) => (
             <div key={rowIndex} className="seat-row">
-              <span className="row-label">{ rowLabels[rowIndex] }:</span>
+              <span className="row-label">{rowLabels[rowIndex]}:</span>
               {Array.from({ length: numCols }, (_, colIndex) => {
-                const seatNumber = containerIndex * (numRows * numCols) + rowIndex * numCols + colIndex + 1;
+                const seatNumber = startingSeatNumber + rowIndex * numCols + colIndex;
                 return (
                   <Seat
                     key={seatNumber}
@@ -53,16 +55,17 @@ const SeatMap = () => {
       </>
     );
   };
+  
 
   return (
     <>
+    <div className='select-seat-bill'>
       <div className="seat-map">
         <h2>Select Your Seats</h2>
-        <div className="seats-container">
+        <div className={`seats-container`}>
           {/* Render seats for the first container */}
           {Array.from({ length: 22 }, (_, index) => (
             <Seat
-             
               key={index}
               seatNumber={index + 1}
               isSelected={selectedSeatsArray[0].includes(index + 1)}
@@ -79,16 +82,9 @@ const SeatMap = () => {
         </div>
       </div>
       <Bill selectedSeats={selectedSeatsArray.flat()} seatPrices={seatPrices} />
+      </div>
     </>
   );
 };
 
 export default SeatMap;
-
-
-
-
-
-
-
-

@@ -21,7 +21,7 @@ const Seat = ({ seatNumber, isSelected, onSelect }) => {
   };
   
   return (
-    <div style={seatStyle}  className={seatClassName} onClick={() => onSelect(seatNumber)}>
+    <div style={seatStyle} className={seatClassName} onClick={() => onSelect(seatNumber)}>
       {seatNumber}
     </div>
   );
