@@ -543,9 +543,14 @@ figure{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    
   }
   
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
   
 
 
@@ -553,64 +558,30 @@ figure{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap:10px;
     
-    
+  }
+
+  .seats-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
-  .seats-container1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position:relative;
-        
-  }
-
-  .seats-container2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  position: relative;
-  right:130px;
-  top:5px;
-
-
-  }
-  .seats-container3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    bottom: 220px;
-    left:130px;
-  }
-  .seats-container4{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    right:137px;
-    bottom:193px;
-   
-  }
-  .seats-container5{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    bottom: 420px;
-    left:132px;
-   
-  }
+  
+  
   
   .seat-row {
     
     display: flex;
     align-items: center;
-    margin-bottom: 5px; 
   }
   
   .row-label {
-    margin-right: 5px; 
+    padding: 10px 16px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
   }
   
   .array {
@@ -624,8 +595,7 @@ figure{
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-    bottom: 350px;
+    
    
     font-size: 30px;
     color: rgb(205, 239, 239);
@@ -640,8 +610,7 @@ figure{
     padding: 1rem;
     flex-direction: column;
     font-size: 20px;
-    position: relative;
-    bottom: 300px;
+    
 
    background-color: rgb(205, 239, 239);
    width:330px;

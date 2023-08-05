@@ -14,6 +14,7 @@ const SeatMap = () => {
   });
 
   const handleSeatSelect = (seatNumber, containerIndex) => {
+    console.log(seatNumber, containerIndex);
     setSelectedSeatsArray((prevSelectedSeatsArray) => {
       const selectedSeatsForContainer = prevSelectedSeatsArray[containerIndex];
       if (selectedSeatsForContainer.includes(seatNumber)) {
@@ -27,17 +28,18 @@ const SeatMap = () => {
       }
     });
   };
-  console.log(handleSeatSelect);
+  // console.log(handleSeatSelect);
 
   const renderContainer = (containerIndex) => {
     const startingSeatNumber = containerIndex * (numRows * numCols) + 1;
   
     return (
       <>
-        <div key={containerIndex} className={`seats-container${containerIndex + 1}`}>
+        
+        <div key={containerIndex} className={`seats-block`}>
           {Array.from({ length: numRows }, (_, rowIndex) => (
             <div key={rowIndex} className="seat-row">
-              <span className="row-label">{rowLabels[rowIndex]}:</span>
+              { (containerIndex  % 2 !== 0) && <span className="row-label seat">{rowLabels[rowIndex]}</span>}
               {Array.from({ length: numCols }, (_, colIndex) => {
                 const seatNumber = startingSeatNumber + rowIndex * numCols + colIndex;
                 return (
@@ -49,6 +51,7 @@ const SeatMap = () => {
                   />
                 );
               })}
+              { (containerIndex % 2 === 0) && <span className="row-label">{rowLabels[rowIndex]}</span>}
             </div>
           ))}
         </div>
@@ -62,9 +65,9 @@ const SeatMap = () => {
     <div className='select-seat-bill'>
       <div className="seat-map">
         <h2>Select Your Seats</h2>
-        <div className={`seats-container`}>
+        <div className="seats-container">
           {/* Render seats for the first container */}
-          {Array.from({ length: 22 }, (_, index) => (
+          {Array.from({ length: 28 }, (_, index) => (
             <Seat
               key={index}
               seatNumber={index + 1}
@@ -75,13 +78,15 @@ const SeatMap = () => {
         </div>
 
         {/* Render seats for the other containers */}
-        {Array.from({ length: containerCount - 1 }, (_, containerIndex) => renderContainer(containerIndex + 1))}
-
-        <div className="selected-seats">
-          Selected Seats: {selectedSeatsArray.map((selectedSeats) => selectedSeats.join(", ")).join(" | ")}
+        <div className='grid-container'>
+          {Array.from({ length: containerCount - 1 }, (_, containerIndex) => renderContainer(containerIndex + 1))}
         </div>
+
+         <div className="selected-seats">
+          Selected Seats: {selectedSeatsArray.map((selectedSeats) => selectedSeats.join(", ")).join(" | ")}
+        </div> 
       </div>
-      <Bill selectedSeats={selectedSeatsArray.flat()} seatPrices={seatPrices} />
+       <Bill selectedSeats={selectedSeatsArray.flat()} seatPrices={seatPrices} /> 
       </div>
     </>
   );
