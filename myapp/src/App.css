@@ -678,13 +678,18 @@ figure{
 
 
   @media screen and (max-width: 768px) {
+    .grid-container{
+      min-width: 500px;
+      overflow-x: auto;
+
+    }
     .seat-map h2 {
-      font-size: 24px; /* Adjust font size for better visibility on phones */
+      font-size: 24px; 
     }
   
     .bill-container {
-      width: 100%; /* Make the bill container full width on phones */
-      border-radius: 0; /* Remove border radius on phones */
+      width: 100%; 
+      border-radius: 0; 
     }
   
     .bill-container h2 {
