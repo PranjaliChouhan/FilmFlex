@@ -520,7 +520,6 @@ figure{
   
     outline: none;
     border-style:none ;
-    height: 15px;
     
     justify-content: center;
     align-items: center;
@@ -723,3 +722,92 @@ figure{
   }
 
   
+
+
+
+
+
+  .payment-container {
+    
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 20px;
+  }
+  
+  .payment-container h2 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+  }
+  
+  .payment-container label {
+    display: block;
+   margin-top: 20px;
+    color: white;
+  }
+  
+ .payment-container    input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    
+    
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .payment-button {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    background-color: #051d23;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .payment-button:hover {
+    background-color: #86c4c4;
+  }
+  
+  .payment-button:active {
+    background-color: #86c4c4;
+  }
+  
+.payment-methods{
+  padding: 5px 0 0 0;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.icon{
+  color: white;
+  margin-right:30px;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+/* Media query for screens smaller than 480px (e.g., mobile phones) */
+@media screen and (max-width: 480px) {
+  input[type="text"],
+  input[type="number"],
+  input[type="date"] {
+    font-size: 14px;
+  }
+
+  .payment-button {
+    font-size: 16px;
+  }
+}

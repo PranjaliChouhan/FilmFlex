@@ -33,7 +33,7 @@ const MallsCard = ({ name, city, zipcode, cinemas }) => {
         <div className="buttons-time">
        
         {[...Array(generateRandomButtonCount())].map((_, index) => (
-         <Link to="SeatMap" className="link-style">  
+         <Link to="SeatsMap" className="link-style">  
           <button className="btn" key={index}>
             <span>{generateRandomTime()}</span>
             </button>

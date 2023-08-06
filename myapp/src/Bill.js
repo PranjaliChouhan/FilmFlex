@@ -1,5 +1,6 @@
 import React from 'react';
 import money from "./assets/money.png";
+import { Link } from "react-router-dom";
 
 const Bill = ({ selectedSeats, seatPrices }) => {
   const calculateTotalPrice = () => {
@@ -43,10 +44,12 @@ const Bill = ({ selectedSeats, seatPrices }) => {
       <div>CGST: Rs {calculateCGST()}</div>
       <div>SGST: Rs {calculateSGST()}</div>
       <div>Total Amount with Taxes: Rs {calculateTotalAmountWithTaxes()}</div>
+      <Link to="Pay" className="link-style">  
       <button>Pay
         <img src={money} alt="notes" style={{ marginRight: "8px" }} />
 
       </button>
+      </Link>
       </div>
     </div>
   );
