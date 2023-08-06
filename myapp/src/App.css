@@ -515,6 +515,19 @@ figure{
     
     
   }
+  .link-style {
+    text-decoration: none;
+  
+    outline: none;
+    border-style:none ;
+    height: 15px;
+    
+    justify-content: center;
+    align-items: center;
+    
+    
+  
+  }
 }
   /*seats*/
 .select-seat-bill{
