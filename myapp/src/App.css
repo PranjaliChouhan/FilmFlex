@@ -474,27 +474,27 @@ figure{
     
       
       border:1px solid #e5eef0;
-      margin:10px;
+     
       padding:0.5rem;
       display: flex;
       flex-direction: column;
-      align-items: center; /* Center the content horizontally */
+      align-items: center; 
       justify-content: center;
      
       
-   /* Allow the container to adjust its height based on content */
+   
   }
 
   .mall-box h2 {
-    font-size: 1.2rem; /* Adjust font size for better visibility on phones */
+    font-size: 1.2rem; 
   }
 
   .mall-box h3 {
-    font-size: 1rem; /* Adjust font size for better visibility on phones */
+    font-size: 1rem; 
   }
 
   .mall-box li {
-    font-size: 0.9rem; /* Adjust font size for better visibility on phones */
+    font-size: 0.9rem; 
   }
   .buttons-time {
    
@@ -505,17 +505,14 @@ figure{
     position: relative;
    
   }
-  .link-style {
-    height: 10px; /* Adjust height for better visibility on phones */
-    justify-content: center;
-    align-items: center;
-    padding: 0 0 0 0;
-    margin-left: 10px;
-  }
+  
   .btn {
     width: 20px;
     height: 10px;
-    margin-top: 10px;
+    position: relative;
+    left:50px;
+    
+    
     
   }
 }
@@ -687,27 +684,28 @@ figure{
       font-size: 24px; 
     }
   
-    .bill-container {
-      width: 100%; 
-      border-radius: 0; 
+    .bill-container{
+     
+      margin-left: 100px;
+      
     }
   
     .bill-container h2 {
-      font-size: 26px; /* Adjust font size for better visibility on phones */
+      font-size: 26px; 
     }
   
     .seat-row {
-      flex-wrap: wrap; /* Wrap seat rows on phones */
+      flex-wrap: wrap; 
     }
   
     .array {
       width: 25px;
       height: 25px;
-      /* Adjust seat size for better fit on phones */
+      
     }
   
     .selected-seats {
-      font-size: 24px; /* Adjust font size for better visibility on phones */
+      font-size: 24px; 
     }
   }
 
